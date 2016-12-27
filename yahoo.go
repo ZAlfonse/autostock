@@ -52,7 +52,7 @@ func YahooMakeRequest(ticker string, modules []string) YahooResult {
 
 	if err := json.Unmarshal(byt, &yResp); err != nil {
 		fmt.Println(u)
-		panic(err)
+		fmt.Println(err)
 	}
 
 	return yResp.QuoteSummary.Result[0]
